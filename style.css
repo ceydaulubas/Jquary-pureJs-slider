@@ -1,0 +1,25 @@
+li{
+    list-style: none;
+}
+
+#product-oldPrice{
+  text-decoration:line-through;
+  color: red; 
+}
+
+img{
+  width: 70px;
+}
+
+#card{
+  border: black;
+  background-color: rgb(145, 145, 146);
+}
+
+#product-name{
+  align-items: center;
+}
+
+.card-img-top{
+  width: 70px;
+}
