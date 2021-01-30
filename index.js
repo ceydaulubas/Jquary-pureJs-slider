@@ -14,28 +14,52 @@
 
 //     }
 //     });
-    
+
 //     });
 
-    $.getJSON("data.json", function (data) {
-        var items = [];
-        var imgList = "";
-        $.each(data, function (key, val) {
+$.getJSON("data.json", function (data) {
+    var items = [];
+    var imgList = "";
+    $.each(data, function (key, val) {
 
-           
-            items.push("<img src=" + val.image+ " class='card-img-top'></img>"+ "<div class='card-body'></div>" +"<h5 id='product-name'>" + val.name + "</h5>"+ "<p id='product-rebsorte'>" + val.params.rebsorte + "</p>"+"<p id='product-priceText'>" + val.price + "</p>"+ "<p id='product-oldPrice'>" + val.oldPrice + "</p>"+ "<p id='product-rebsorte'>" + val.params.basePrice + "</p>");
-            // items.push("<h5 id='product-name'>" + val.name + "</h5>");
-            // items.push("<p id='product-rebsorte'>" + val.params.rebsorte + "</p>");
-            // items.push("<p id='product-priceText'>" + val.price + "</p>");
-            // items.push("<p id='product-oldPrice'>" + val.oldPrice + "</p>");
-            // items.push("<p id='product-rebsorte'>" + val.params.basePrice + "</p>");  
+        var $outerDiv = $("<div/>")
+        .css("width", "18rem")
+        .addClass("card")   // creates a div element
+        .prepend($('<img>',{id:'theImg',src:val.image})).addClass("card-img-top")
+        .appendTo("body")
 
-               
-        });
-    
-        $("<div/>", {
-            "class": "card",
-            html: items.join("<div>")
-        }).appendTo("body");
+        var $innerDiv = $("<div/>")
+        .addClass("card-body")   // creates a div element
+        .append($("<h5 class='card-title'>"+val.name+"</div>")
+        .append($("<p class='card-text'>"+val.priceText+"</p>")
+       .append($("<p class='card-text'>"+val.oldPriceText+"</p>")
+       .append($("<p class='card-text'>"+val.params.basePrice+"</p>")
+        ))));
+
+        $outerDiv.append($innerDiv)
+       
+        items.push($outerDiv);
+
+
     });
-        
+
+    $("<div/>", {
+        // "class": "card",
+        html: items.join("<div>")
+    }).appendTo("body");
+});
+
+
+
+
+
+
+
+
+// var $newDiv = $("<div/>")   // creates a div element
+//     .attr("id", "someID")  // adds the id
+//     .addClass("someClass")   // add a class
+//     .append
+//     .html("<div>stuff here</div>");
+
+// $("#somecontainer").append($newDiv);
