@@ -10,7 +10,7 @@ $.getJSON("data.json", function (data) {
 
         var $outerDiv = $("<div/>")
             .css("width", "18rem")
-            .addClass("card")   //add class name
+            .addClass("card")  
             .prepend($('<img>', { class: 'theImg', src: val.image }))
             .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU"+"</li>" : "<li class='card-isNew'></li>"))
             .append($( likeCount === "" ? "<p class=' card-count'>" +" </p>": "<p class=' card-count' >" + " 🤍" + val.params.likeCount + "</p>"))

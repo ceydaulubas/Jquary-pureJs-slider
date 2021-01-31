@@ -1,9 +1,14 @@
+.navbar{
+  width: 100%;
+}
+
+.navbar-brand{
+  font-size: 14px;
+}
 .header {
   margin: 1% 0;
   text-align: center;
-  /* @media screen and (min-width: 300px) and (max-width: 1000px) {
-    margin: 10% 0;
-  } */
+  width: 100%;
 }
 
 .card {
@@ -45,7 +50,10 @@
 
 .card-isNew {
   /* margin-top: -75%; */
-  color: red;
+  color: rgb(255, 255, 255);
+  background-color: rgb(3, 2, 56);
+  width: 20%;
+  text-align: center;
   list-style: none;
   margin-left: 5%;
 }
