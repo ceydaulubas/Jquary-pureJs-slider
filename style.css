@@ -34,6 +34,13 @@
   margin-top: 75%;
 }
 
+.card-isNew{
+  /* margin-top: -75%; */
+  color: red;
+  list-style: none;
+  margin-left: 5%;
+}
+
 .card-title {
   font-weight: bold;
   font-size: 16px;
