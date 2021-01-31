@@ -19,31 +19,32 @@
 
 $.getJSON("data.json", function (data) {
     var items = [];
-    var imgList = "";
+    // var imgList = "";
     $.each(data, function (key, val) {
 
         var $outerDiv = $("<div/>")
-        .css("width", "18rem")
-        .addClass("card")   // creates a div element
-        .prepend($('<img>',{id:'theImg',src:val.image})).addClass("card-img-top")
-        .appendTo("body")
+            .css("width", "18rem")
+            .addClass("card")   // creates a div element
+            .prepend($('<img>', { id: 'theImg', src: val.image })).addClass("card-img-top")
+            .appendTo("body")
 
-        var $innerDiv = $("<div/>")
-        .addClass("card-body")   // creates a div element
-        .append($("<h5 class='card-title'>"+val.name+"</div>")
-        .append($("<p class='card-text'>"+val.priceText+"</p>")
-       .append($("<p class='card-text'>"+val.oldPriceText+"</p>")
-       .append($("<p class='card-text'>"+val.params.basePrice+"</p>")
-        ))));
+        var $innerDiv = $("<ul/>")
+            .addClass("card-body")   // creates a div element
+            .append($("<li class='card-title'>" + val.name + "</li>"+ "<li class='card-text-price'>" + val.priceText + "</li>"+"<li class='card-text-old'>" + val.oldPriceText + "</li>"+"<li class='card-text-base'>" + val.params.basePrice + "</li>")
+                // .append($("<li class='card-text-price'>" + val.priceText + "</li>")
+                    // .append($("<li class='card-text-old'>" + val.oldPriceText + "</li>")
+                        // .append($("<li class='card-text-base'>" + val.params.basePrice + "</li>")
+                        // )))
+                        );
 
         $outerDiv.append($innerDiv)
-       
+
         items.push($outerDiv);
 
 
     });
 
-    $("<div/>", {
+    $(".card", {
         // "class": "card",
         html: items.join("<div>")
     }).appendTo("body");

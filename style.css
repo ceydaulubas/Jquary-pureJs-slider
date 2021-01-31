@@ -1,19 +1,17 @@
-li{
-    list-style: none;
-}
 
-#product-oldPrice{
+.card-text-old{
   text-decoration:line-through;
   color: red; 
 }
 
 img{
-  width: 70px;
+  width: 50px;
 }
 
-#card{
+.card{
   border: black;
-  background-color: rgb(145, 145, 146);
+  background-color: rgba(202, 202, 206, 0.438);
+  /* width: 18rem; */
 }
 
 #product-name{
@@ -22,4 +20,20 @@ img{
 
 .card-img-top{
   width: 70px;
+}
+
+li{
+  list-style: none;
+}
+div{
+  margin: 50px;
+}
+
+#theImg{
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+
 }
