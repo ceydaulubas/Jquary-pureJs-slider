@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="index.js">
+    <!-- Slider -->
 </head>
 
 <body>
@@ -22,12 +23,20 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 
-    <h1>Our choices for you</h1>   
+    <!-- Slider  -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/lightslider.js"></script>
+
+    <h1>Our choices for you</h1>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $(".card").lightSlider(); 
+        });
+      </script>
+
     <script src="index.js"></script>
 
-    <div id="list">
-
-    </div>
 </body>
+
 
 </html>
