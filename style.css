@@ -1,9 +1,18 @@
+.header {
+  margin: 1% 0;
+  text-align: center;
+  /* @media screen and (min-width: 300px) and (max-width: 1000px) {
+    margin: 10% 0;
+  } */
+}
+
 .card {
   display: flex;
-  /* flex-direction: row; */
   overflow: hidden;
   background-color: rgba(202, 202, 206, 0.185);
-  margin: 4%;
+  margin-left: 10%;
+  margin-bottom: 4%;
+  margin-top: 4%;
   float: left;
   height: 480px;
   /* display: table-cell; */
@@ -34,7 +43,7 @@
   margin-top: 75%;
 }
 
-.card-isNew{
+.card-isNew {
   /* margin-top: -75%; */
   color: red;
   list-style: none;
@@ -45,6 +54,7 @@
   font-weight: bold;
   font-size: 16px;
   text-align: center;
+  margin-bottom: 2%;
 }
 
 .card-text-rebsorte {
@@ -57,7 +67,7 @@
   font-weight: bold;
   text-align: center;
   float: left;
-  clear: none; 
+  clear: none;
   margin-left: 25%;
 }
 
@@ -67,14 +77,12 @@
   text-align: center;
   margin-right: 25%;
   /* float: right; */
-
 }
 
 .card-text-base {
   margin-top: 15%;
   color: rgb(115, 114, 116);
   text-align: center;
-
 }
 
 ul {
