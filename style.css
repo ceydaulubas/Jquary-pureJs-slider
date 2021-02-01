@@ -5,10 +5,10 @@
 .navbar-brand{
   font-size: 14px;
 }
+
 .header {
-  margin: 1% 0;
   text-align: center;
-  width: 100%;
+  margin-top: 2%;
 }
 
 .card {
@@ -17,13 +17,9 @@
   background-color: rgba(202, 202, 206, 0.185);
   margin-left: 10%;
   margin-bottom: 4%;
-  margin-top: 4%;
+  margin-top: 3%;
   float: left;
-  height: 480px;
-  /* display: table-cell; */
-  /* flex-wrap: wrap; */
-  /* display: table; */
-  display: table-row;
+  height: 550px;
   @media screen and (min-width: 300px) and (max-width: 1000px) {
     margin: 15% 0;
   }
@@ -38,19 +34,33 @@
 }
 
 .card-count {
-  margin-left: 3%;
-  margin-top: -80%;
-  /* color: rgb(248, 15, 15); */
+  margin-top: 1%;
+  background-color:white;
+  color: rgb(51, 0, 0);
+  width: 20%;
+  text-align: center;
+  margin-left: 5%;
 }
 
 .card-body {
   background-color: rgba(241, 239, 239, 0.164);
-  margin-top: 75%;
+  /* margin-top: 75%; */
+}
+
+.card-ratio{
+  list-style: none;
+  background-color: red;
+  color: white;
+  width: 20%;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: -5%;
+
 }
 
 .card-isNew {
-  /* margin-top: -75%; */
-  color: rgb(255, 255, 255);
+  margin-top: -6%;
+  color: white;
   background-color: rgb(3, 2, 56);
   width: 20%;
   text-align: center;
@@ -63,6 +73,7 @@
   font-size: 16px;
   text-align: center;
   margin-bottom: 2%;
+  /* margin-top: 90%; */
 }
 
 .card-text-rebsorte {
@@ -75,7 +86,6 @@
   font-weight: bold;
   text-align: center;
   float: left;
-  clear: none;
   margin-left: 25%;
 }
 
@@ -84,17 +94,16 @@
   text-decoration: line-through;
   text-align: center;
   margin-right: 25%;
-  /* float: right; */
+  float: right;
 }
 
 .card-text-base {
-  margin-top: 15%;
+  margin-top: 10%;
   color: rgb(115, 114, 116);
   text-align: center;
 }
 
 ul {
-  margin: 0;
   padding: 0;
   list-style: none;
 }

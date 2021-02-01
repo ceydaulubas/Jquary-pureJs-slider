@@ -7,21 +7,28 @@ $.getJSON("data.json", function (data) {
         var rebsorte = val.params.rebsorte;
         var isNew = val.params.isNew;
         var likeCount = val.params.likeCount;
+        var oldPriceForPer= val.oldPrice
 
         var $outerDiv = $("<div/>")
             .css("width", "18rem")
             .addClass("card")  
             .prepend($('<img>', { class: 'theImg', src: val.image }))
-            .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU"+"</li>" : "<li class='card-isNew'></li>"))
-            .append($( likeCount === "" ? "<p class=' card-count'>" +" </p>": "<p class=' card-count' >" + " 🤍" + val.params.likeCount + "</p>"))
+            .append($(isNaN(oldPriceForPer) == true? "</br>" +" </li>": "<li class='card-ratio'>" +"-"+
+            // "<li class=' card-ratio'>"
+            ((Math.round(val.oldPrice-val.price)/val.oldPrice)*100).toFixed(0) +"%"+ "</li>" ))
+            .append($( likeCount === "" ? "</br>": "<p class=' card-count' >" + " 🤍" + val.params.likeCount + "</p>"))
+            // "<p class=' card-count'>"+" "+" </p>"
+            .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU"+"</li>" :"</br>" ))
             .appendTo("body")
 
         var $innerDiv = $("<ul/>")
             .addClass("card-body")
             .append($("<li class='card-title'>" + val.name + "</li>" +
-                (rebsorte === "" ? "<br/>" : "<li class='card-text-rebsorte'>" + "| " + val.params.rebsorte + "</li>") +
+            "<br/>"+
+                (rebsorte === "" ? "<li class='card-text-rebsorte'>"+" " +"</li>" : "<li class='card-text-rebsorte'>" +" | " + val.params.rebsorte + "</li>") +
+                // "<li class='card-text-rebsorte'>"+" " +"</li>"
                 "<li class='card-text-price'>" + val.priceText + "*" + "</li>" +
-                (oldPrice === "" ? "" : "<li class='card-text-old'>" + val.oldPriceText + "</li>") +
+                (oldPrice === "" ?"</br>": "<li class='card-text-old'>" + val.oldPriceText + "</li>") +
                 "<li class='card-text-base'>" + val.params.basePrice + "</li>")
             );
 
