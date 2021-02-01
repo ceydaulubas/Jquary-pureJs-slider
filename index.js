@@ -42,12 +42,13 @@ $.getJSON("data.json", function (data) {
         html: items.join("<div>")
     }).appendTo("body");
 
-
-    // $('.card').slick({
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 2000,
-    //   });
+/*  ***SLIDER PROBLEM WILL BE FIXED AND ADDED*** 
+    $('.card').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+      */
 });
 
