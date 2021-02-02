@@ -43,7 +43,7 @@ $.getJSON("data.json", function (data) {
 
     $('.bigDiv').slick({
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         //autoplay is optional
         autoplay: true,
         autoplaySpeed: 2000,
