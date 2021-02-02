@@ -3,7 +3,7 @@
 }
 
 .navbar-brand {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .header {
@@ -15,17 +15,11 @@
 .bigDiv {
   margin: 0 auto;
   width: 1000px;
-  background-color: rgba(129, 76, 113, 0.116);
 }
 
 .card {
-  /* display: flex;
-  overflow: hidden; */
   background-color: rgba(202, 202, 206, 0.185);
   margin: 15px ;
-  /* @media screen and (min-width: 300px) and (max-width: 1000px) {
-    margin: 15% ;
-  } */
 }
 
 .theImg {
@@ -37,8 +31,14 @@
 }
 
 .card-count {
-  /* margin-top: 1%; */
+  background-color: white;
   color: rgb(51, 0, 0);
+  width: 20%;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.card-countless{
   width: 20%;
   text-align: center;
   margin-left: 5%;
@@ -55,14 +55,18 @@
   width:20%;
   text-align: center;
   margin-left: 5%;
-  margin-top: -5%;
-
 }
 
 .card-isNew {
-  margin-top: -6%;
   color: white;
   background-color: rgb(3, 2, 56);
+  width: 20%;
+  text-align: center;
+  list-style: none;
+  margin-left: 5%;
+}
+
+.card-isOld{
   width: 20%;
   text-align: center;
   list-style: none;
@@ -91,7 +95,7 @@
 .card-text-old {
   text-decoration: line-through;
   text-align: center;
-  margin-right: 25%;
+  margin-right: 20%;
   float: right;
 }
 
@@ -99,7 +103,7 @@
   margin-top: 10%;
   color: rgb(115, 114, 116);
   text-align: center;
-}
+} 
 
 ul {
   padding: 0;
