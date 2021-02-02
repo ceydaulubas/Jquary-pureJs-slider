@@ -9,10 +9,9 @@
 
 .header {
   text-align: center;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
-/* Defines the width of the carousel and centers it on the page */
 .bigDiv {
   margin: 0 auto;
   width: 1000px;
@@ -20,12 +19,11 @@
 
 .card {
   background-color: rgba(202, 202, 206, 0.185);
-  margin: 15px ;
+  margin: 15px;
 }
 
 .theImg {
   width: 60px;
-  /* display: block; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
@@ -39,7 +37,7 @@
   margin-left: 5%;
 }
 
-.card-countless{
+.card-countless {
   width: 20%;
   text-align: center;
   margin-left: 5%;
@@ -54,15 +52,15 @@
   list-style: none;
   background-color: red;
   color: white;
-  width:20%;
+  width: 20%;
   text-align: center;
   margin-left: 5%;
   margin-top: -60%;
 }
 
-.card-ratioless{
+.card-ratioless {
   list-style: none;
-  width:20%;
+  width: 20%;
   text-align: center;
   margin-left: 5%;
   margin-top: -60%;
@@ -77,7 +75,7 @@
   margin-left: 5%;
 }
 
-.card-isOld{
+.card-isOld {
   width: 20%;
   text-align: center;
   list-style: none;
@@ -113,17 +111,17 @@
   margin-top: 10%;
   color: rgb(115, 114, 116);
   text-align: center;
-} 
+}
 
 ul {
   padding: 0;
   list-style: none;
 }
 
-.slick-prev{
+.slick-prev {
   font-size: 12px;
 }
 
-.slick-next{
+.slick-next {
   font-size: 12px;
 }

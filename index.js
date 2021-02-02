@@ -13,10 +13,10 @@ $.getJSON("data.json", function (data) {
             // .css("width", "18rem")
             .addClass("card")
             .prepend($('<img>', { class: 'theImg', src: val.image }))
-            .append($(isNaN(oldPriceForPer) == true ? "<li class='card-ratioless'>" + "</br>" + " </li>" : "<li class='card-ratio'>" + "-"+
-                ((Math.round(val.oldPrice-val.price ) / val.oldPrice) * 100).toFixed(0) + "%" + "</li>"))
+            .append($(isNaN(oldPriceForPer) == true ? "<li class='card-ratioless'>" + "</br>" + " </li>" : "<li class='card-ratio'>" + "-" +
+                ((Math.round(val.oldPrice - val.price) / val.oldPrice) * 100).toFixed(0) + "%" + "</li>"))
             .append($(likeCount === "" ? "<p class=' card-countless' >" + "</br>" + "</p>" : "<p class=' card-count' >" + " 🤍" + val.params.likeCount + "</p>"))
-            .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU" + "</li>" : "<li class='card-isOld'>" + "</br>"+"</li>" ))
+            .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU" + "</li>" : "<li class='card-isOld'>" + "</br>" + "</li>"))
             .appendTo(".bigDiv")
 
         var $innerDiv = $("<ul/>")
@@ -25,7 +25,7 @@ $.getJSON("data.json", function (data) {
                 "<br/>" +
                 (rebsorte === "" ? "<li class='card-text-rebsorte'>" + "</br> " + "</li>" : "<li class='card-text-rebsorte'>" + " | " + val.params.rebsorte + "</li>") +
                 "<li class='card-text-price'>" + val.priceText + "*" + "</li>" +
-                (oldPrice === "" ? "<li class='card-text-old'>" + "</br>"+ "</li>" : "<li class='card-text-old'>" + val.oldPriceText + "</li>") +
+                (oldPrice === "" ? "<li class='card-text-old'>" + "</br>" + "</li>" : "<li class='card-text-old'>" + val.oldPriceText + "</li>") +
                 "<li class='card-text-base'>" + val.params.basePrice + "</li>"
             )
             );
@@ -44,8 +44,9 @@ $.getJSON("data.json", function (data) {
     $('.bigDiv').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        //autoplay is optional
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
 });
 
