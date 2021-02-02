@@ -13,7 +13,7 @@ $.getJSON("data.json", function (data) {
             // .css("width", "18rem")
             .addClass("card")
             .prepend($('<img>', { class: 'theImg', src: val.image }))
-            .append($(isNaN(oldPriceForPer) == true ? "</br>" + " </li>" : "<li class='card-ratio'>" + "-"+
+            .append($(isNaN(oldPriceForPer) == true ? "<li class='card-ratioless'>" + "</br>" + " </li>" : "<li class='card-ratio'>" + "-"+
                 ((Math.round(val.oldPrice-val.price ) / val.oldPrice) * 100).toFixed(0) + "%" + "</li>"))
             .append($(likeCount === "" ? "<p class=' card-countless' >" + "</br>" + "</p>" : "<p class=' card-count' >" + " 🤍" + val.params.likeCount + "</p>"))
             .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU" + "</li>" : "<li class='card-isOld'>" + "</br>"+"</li>" ))

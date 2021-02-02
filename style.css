@@ -46,6 +46,7 @@
 
 .card-body {
   background-color: rgba(241, 239, 239, 0.164);
+  margin-top: 40%;
 }
 
 .card-ratio {
@@ -55,6 +56,15 @@
   width:20%;
   text-align: center;
   margin-left: 5%;
+  margin-top: -60%;
+}
+
+.card-ratioless{
+  list-style: none;
+  width:20%;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: -60%;
 }
 
 .card-isNew {
