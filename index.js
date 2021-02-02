@@ -10,11 +10,11 @@ $.getJSON("data.json", function (data) {
         var oldPriceForPer = val.oldPrice
 
         var $outerDiv = $("<div/>")
-            .css("width", "8rem")
+            // .css("width", "18rem")
             .addClass("card")
             .prepend($('<img>', { class: 'theImg', src: val.image }))
-            .append($(isNaN(oldPriceForPer) == true ? "</br>" + " </li>" : "<li class='card-ratio'>" + "-" +
-                ((Math.round(val.oldPrice - val.price) / val.oldPrice) * 100).toFixed(0) + "%" + "</li>"))
+            .append($(isNaN(oldPriceForPer) == true ? "</br>" + " </li>" : "<li class='card-ratio'>" + 
+                ((Math.round(val.price- val.oldPrice ) / val.oldPrice) * 100).toFixed(0) + "%" + "</li>"))
             .append($(likeCount === "" ? "<p class=' card-count' >" + "</br>" + val.params.likeCount + "</p>" : "<p class=' card-count' >" + " 🤍" + val.params.likeCount + "</p>"))
             .append($(isNew === "true" ? "<li class='card-isNew'>" + "NEU" + "</li>" : "<li class='card-isNew'>" + "</li>" + "</br>"))
             .appendTo(".bigDiv")
@@ -42,18 +42,10 @@ $.getJSON("data.json", function (data) {
     // .appendTo("body");
 
     $('.bigDiv').slick({
-
-
-    //     infinite: true,
-    // slidesToShow: 3, // Shows a three slides at a time
-    // slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
-    // arrows: true, // Adds arrows to sides of slider
-
         slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        slidesToScroll: 3,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
     });
-
 });
 
